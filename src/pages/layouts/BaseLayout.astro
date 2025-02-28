@@ -1,7 +1,7 @@
 ---
 const { pageTitle } = Astro.props;
 import { Image } from 'astro:assets'
-import jaro from '../../../public/jaro.svg'
+import favicon from '../../../public/favicon.svg'
 import './../../styles/global.css'
 
 const date = new Date();
@@ -12,12 +12,18 @@ const date = new Date();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+    integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
+    crossorigin="anonymous"
+    />
     <title>{pageTitle}</title>
   </head>
   <body>
     <div class="container">
         <header class="header">
-          <a href="/"><Image src={jaro} alt="Logo" width='50'/></a>
+          <a href="/"><Image src={favicon} alt="Logo" width='50'/></a>
         </header>
         <slot />
         <footer>

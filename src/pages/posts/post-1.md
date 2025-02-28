@@ -14,7 +14,9 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 ## What I've accomplished
 
-$\vec{r}$
+$$
+\vec{r} = \vec{a}\cdot\vec{b}
+$$
 
 1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
 
