@@ -6,9 +6,9 @@ const pageTitle = "Home Page";
 <BaseLayout pageTitle="Wow">
   <main class="main_index">
     <p>Hey there! I'm Jaro, a physics student from Germany, with a deep curiosity for physics and life in general.</p>
-    <hr>
-    <div>
-      {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    <div class="divider"></div>
+    <div class="blog_post_container">
+      {allPosts.map((post: any) => <li class="blog_post"><a href={post.url}>{post.frontmatter.title}</a><span>{post.frontmatter.pubDate.toString().slice(8,10)}.{post.frontmatter.pubDate.toString().slice(5,7)}.{post.frontmatter.pubDate.toString().slice(0,4)}</span></li>)}
     </div>
   </main>
 </BaseLayout>

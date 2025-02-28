@@ -3,6 +3,8 @@ const { pageTitle } = Astro.props;
 import { Image } from 'astro:assets'
 import jaro from '../../../public/jaro.svg'
 import './../../styles/global.css'
+
+const date = new Date();
 ---
 <html lang="en">
   <head>
@@ -15,9 +17,12 @@ import './../../styles/global.css'
   <body>
     <div class="container">
         <header class="header">
-          <Image src={jaro} alt="Logo" width='50'/>
+          <a href="/"><Image src={jaro} alt="Logo" width='50'/></a>
         </header>
         <slot />
+        <footer>
+          Copyright © {date.getFullYear()} Jaro Pleus | <a href="/legal">Legal</a>
+        </footer>
     </div>
   </body>
 </html>
